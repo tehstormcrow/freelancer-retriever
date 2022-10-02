@@ -4,7 +4,7 @@ const { searchAllActiveProjects } = require('../lib/freelancerApi');
 const scheduleUpdates = () => {
   searchAllActiveProjects();
 
-  cron.schedule('*/1 * * * *', () => {
+  cron.schedule('*/3 * * * *', () => {
     searchAllActiveProjects();
   });
 };

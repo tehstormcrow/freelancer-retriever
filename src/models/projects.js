@@ -30,6 +30,14 @@ const ProjectSchema = new mongoose.Schema({
   },
   time_submitted: Number,
   time_updated: Number,
+  blacklisted: {
+    type: Boolean,
+    default: false,
+  },
+  favorited: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);
